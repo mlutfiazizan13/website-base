@@ -6,22 +6,24 @@
 @endsection
 
 @section('content')
-<div class="relative bg-fixed bg-center bg-no-repeat bg-cover text-center bg-black" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ asset('images/achievement.jpg') }})">
+{{-- <div class="relative bg-fixed bg-center bg-no-repeat bg-cover text-center bg-black" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ asset('images/achievement.jpg') }})">
     <div class="py-20 px-3 text-white">
         <p class="text-4xl">Contact Us</p>
     </div>
-</div> 
+</div>  --}}
+<p class="text-4xl font-semibold text-center">Hubungi Kami</p>
 <div class="px-10 py-10">
     <div class="grid grid-cols-1 md:grid-cols-2 md:px-20">
         <div class="py-9 px-10">
-            <p class="text-2xl">Contact Details</p>
+            <p class="text-2xl">Kontak</p>
             <div class="py-6">
-                <p class="mb-4">Jl. Merdeka Barat No.12, Jakarta Pusat.</p>
-                <p><strong>Phone</strong> : +62-895-2924-8087</p>
-                <p><strong>Email</strong> : admin@admin.com</p>
+                <p class="text-xl mb-1">Kantor Sekretariat Yayasan</p>
+                <p class="mb-4">Ruko Plaza Cibinong Jln. KSR Dadi Kusmayadi No. 16 Kel. Tengah Kec. Cibinong Kab. Bogor</p>
+                <p><strong>Phone</strong> : 0817-9152-513</p>
+                <p><strong>Email</strong> : info@yayasanhtbb.org</p>
             </div>
         </div>
-        <div class="min-w-full bg-[#06283D] rounded-lg shadow-lg">
+        <div class="min-w-full bg-[#00a549] rounded-lg shadow-lg">
             <div class="py-9 px-10">
                 <p class="text-2xl text-white font-bold">Let's Discuss...</p>
 
@@ -47,7 +49,7 @@
                         </div>
                         <label for="terms" class="ml-2 text-sm font-medium  dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
                     </div> --}}
-                    <button type="submit" class="text-white bg-[#1363DF] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send</button>
+                    <button type="submit" class="text-white bg-[#00653d] hover:scale-105 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 duration-150">Send</button>
                 </form>
   
             </div>

@@ -11,19 +11,20 @@
 
     <style>
         *{
-            font-family: 'Overpass', sans-serif;
+            font-family: 'Varela'
         }
     </style>
+    @yield('css_style')
 
     {{-- Library --}}
 
 
-    <title>@yield('title', 'Web Kontraktor')</title>
+    <title>@yield('title', 'Web')</title>
 </head>
 <body>
     <div id="page-container" class="flex flex-col justify-between relative min-h-screen">
         <div id="overlay" class="hidden fixed bg-black h-screen w-full z-40 opacity-50 duration-300"></div>
-        @yield('navbar')
+        @include('web.layouts.navbar.navbar')
         <div id="content-wrap" class="flex-grow">
             @yield('content')
         </div>
@@ -31,15 +32,13 @@
             @include('web.layouts.footer')
         </footer>
 
-        <div class="fixed bottom-0 flex flex-col gap-3 right-0 p-6">
+        {{-- <div class="fixed bottom-0 flex flex-col gap-3 right-0 p-6">
             <a id="email-message" class="invisible grid w-14 h-14 bg-[#25D366] opacity-0 text-white rounded-full text-center items-center content-center duration-500 shadow-lg">
-                {{-- <i class="fa-solid fa-message fa-xl"></i> --}}
                 <i class="fa-brands fa-whatsapp fa-2x"></i>
             </a>
         </div>
         <div class="fixed bottom-0 flex flex-col gap-3 right-0 p-6">
             <a id="wa-message" class="invisible grid w-14 h-14 bg-[#FF0000] opacity-0 text-white rounded-full text-center items-center content-center duration-500 shadow-lg">
-                {{-- <i class="fa-solid fa-message fa-xl"></i> --}}
                 <i class="fa-regular fa-envelope fa-xl"></i>
             </a>
         </div>
@@ -48,7 +47,7 @@
             <button id="button-message" class="w-14 h-14 bg-[#06283D] text-white rounded-full grid text-center items-center content-center duration-500 shadow-lg">
                 <i class="fa-solid fa-message fa-xl"></i>
             </button>
-        </div>
+        </div> --}}
     </div>
     {{-- mobile navbar --}}
 
@@ -65,7 +64,20 @@
                 $(this).toggleClass('rotate-180');
                 
             });
+
+            $(window).scroll(function () { 
+                if ($(window).scrollTop() >= 40) {
+                    // $('#navbar').removeClass('shadow-sm');
+
+                    $('#navbar').addClass('shadow-sm');
+                } else {
+                    $('#navbar').removeClass('shadow-sm');
+                    // $('#navbar').addClass('shadow-sm');
+                }
+            });
         });
+
+        
         function toggleMobileNav(isOpen) { 
             if (isOpen === false) {
                 $('#overlay').removeClass('hidden');
